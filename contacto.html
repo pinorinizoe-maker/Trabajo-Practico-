@@ -1,84 +1,300 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ciudad de la Furia - Contacto</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ESTOS SON LOS ESTILOS INCORPORADOS DIRECTAMENTE EN EL HTML -->
+  <style>
+    /* --- RESET Y VARIABLES GLOBALES --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-fondo-general: #F4F1EA;  /* Crema / Pastel muy suave de fondo */
+      --color-tarjeta: #FFFFFF;        /* Blanco limpio para las secciones */
+      --color-primario: #8B5CF6;     /* Lila / Violeta pastel principal */
+      --color-secundario: #4338CA;   /* Índigo oscuro para textos fuertes */
+      --color-acento: #F43F5E;       /* Coral / Salmón para detalles y enlaces */
+      --color-texto: #334155;        /* Gris oscuro legible para los párrafos */
+      --color-texto-muted: #64748B;  /* Gris medio */
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--color-fondo-general);
+      color: var(--color-texto);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* --- HEADER Y NAVEGACIÓN --- */
+    header {
+      background-color: #EDE9FE; /* Lavanda pastel clarito */
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border-bottom: 4px solid var(--color-primario);
+      margin-top: 20px;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--color-secundario);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--color-texto-muted);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--color-primario);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.activo {
+      color: var(--color-acento);
+      text-decoration: underline;
+    }
+
+    /* --- CONTENIDO PRINCIPAL (MAIN) --- */
+    main {
+      background-color: var(--color-tarjeta);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      border-radius: 0 0 16px 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      color: var(--color-secundario);
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      color: var(--color-primario);
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--color-acento);
+    }
+
+    /* --- GRILLA DE INFORMACIÓN DE CONTACTO (Flexbox) --- */
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .info-box {
+      flex: 1 1 280px;
+      background-color: #F8FAFC;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #E2E8F0;
+      border-top: 4px solid var(--color-primario);
+    }
+
+    /* --- SECCIÓN MAPA --- */
+    .seccion-mapa {
+      background-color: #F8FAFC;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #E2E8F0;
+    }
+
+    .contenedor-mapa {
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* --- FORMULARIO ESTILO PASTEL --- */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      background-color: #F8FAFC;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #E2E8F0;
+    }
+
+    .grupo-input {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--color-secundario);
+    }
+
+    input, select {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      background-color: #FFFFFF;
+      color: var(--color-texto);
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--color-primario);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+    }
+
+    .btn-enviar {
+      background-color: var(--color-primario);
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .btn-enviar:hover {
+      background-color: var(--color-secundario);
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--color-texto-muted);
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-   <h1>🏙️ Ciudad de la Furia</h1>
-<p>“Donde cada calle tiene su ritmo”</p>
+    <h1>🏙️ Ciudad de la Furia</h1>
+    <p>“Donde cada calle tiene su ritmo”</p>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="ciudad.html">La Ciudad</a></li>
         <li><a href="lugares.html">Lugares y Festivales</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contactociudad.html" class="activo">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Contacto</h2>
+    <!-- SECCIÓN DE INFORMACIÓN Y DATOS -->
+    <section class="seccion-contacto">
+      <h2>Contacto y Ubicación</h2>
+      <p>¿Querés obtener más información sobre la Ciudad de la Furia? Podés comunicarte con nuestra Oficina de Turismo o visitarnos en el predio.</p>
 
-    <p>¿Querés obtener más información sobre la Ciudad de la Furia? Podés comunicarte con nuestra Oficina de Turismo.</p>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>📌 Oficina de Turismo</h3>
+          <p><strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia</p>
+          <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+          <p><strong>Email:</strong> <a href="mailto:turismo@ciudaddelafuria.com">turismo@ciudaddelafuria.com</a></p>
+        </div>
 
-    <h3>Oficina de Turismo</h3>
+        <div class="info-box">
+          <h3>🌐 Redes sociales</h3>
+          <p>Seguinos en nuestra red social oficial para enterarte de los line-ups y sorpresas:</p>
+          <p><a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">Furia Social Oficial</a></p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      <strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia
-    </p>
+    <!-- SECCIÓN DEL MAPA DE LA CIUDAD -->
+    <section class="seccion-mapa">
+      <h2>Mapa del Predio</h2>
+      <p>Encontrá los escenarios, zonas de foodtrucks y la oficina de informes.</p>
+      <div class="contenedor-mapa">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016888009403!2d-58.38414452331998!3d-34.603738757292275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb6b%3A0x11abasde12345!2sObelisco!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" 
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
 
-    <p>
-      <strong>Teléfono:</strong>
-      <a href="tel:+541112345678">+54 11 1234-5678</a>
-    </p>
+    <!-- SECCIÓN DEL FORMULARIO -->
+    <section class="seccion-formulario">
+      <h2>Formulario de Colaboración</h2>
+      <form action="#" method="post">
+        
+        <div class="grupo-input">
+          <label for="nombre">Nombre y apellido</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej: María Gomez">
+        </div>
 
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:turismo@ciudaddelafuria.com">turismo@ciudaddelafuria.com</a>
-    </p>
+        <div class="grupo-input">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required placeholder="tu@correo.com">
+        </div>
 
-    <h3>Redes sociales</h3>
+        <div class="grupo-input">
+          <label for="motivo">¿Cómo querés colaborar?</label>
+          <select name="motivo" id="motivo">
+            <option value="">Seleccioná una opción</option>
+            <option value="furia">Furia Fest.</option>
+            <option value="vol">Turismo</option>
+            <option value="don">Cultura y eventos</option>
+            <option value="red">Participación / Emprendimientos</option>
+            <option value="tra">Otras consultas</option>
+          </select>
+        </div>
 
-    <p>
-      Seguinos en nuestra red social:
-      <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">
-        Furia Social
-      </a>
-    </p>
+        <button type="submit" class="btn-enviar">Enviar solicitud</button>
+      </form>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Ciudad de la Furia - Oficina de Turismo</p>
   </footer>
-  <main>Formulario de contacto</main>
-    <br>
-    <hr>
-    <form action="#" method="post">
-        <label for="nombre" id="nomber"> </label>
-        <input type="text" required placeholder="Nombre y apellido"> <br>
-        <label for="correo">Correo</label>
-        <input type="email" name="correo" id="correo" required placeholder="tu@correo.com"><br>
- <label for="motivo">Como queres colaborar?</label>
-<select name="motivo" id="motivo">
-<option value="">furia fest.</option>
-<option value="vol">turismo</option>
-<option value="don">cultura y eventos</option>
-<option value="red">participacion/emprendimientos</option>
-<option value="tra">otras consultas</option>
- </select>
-  <br>
-
-    </form>
-   <button type="submit">Enviar</button>
-
-</html>
 
 </body>
 </html>
-   
-
-
