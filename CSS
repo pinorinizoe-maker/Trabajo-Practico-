@@ -1,8 +1,115 @@
-:root{
-    --color-base:#FAFAFA;
+:root {
+    --color-base: #ebbcf1;
     --COLOR-CIUDAD: #6A0DAD;
     --color-contACTO: #0077B6;
     --COLORFONDO-EVENTOS: #121212;
-  
+    --BLANCO-: #111111;
+    --FUENTE-PRINCIPAL: 'Playfair Display', serif;
+}
 
+body {
+    font-family: var(--FUENTE-PRINCIPAL);
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--BLANCO-);
+    background-color: var(--color-base);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background-color: var(--COLOR-CIUDAD);
+    color: var(--color-base);
+    padding: 4rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+footer {
+    background-color: var(--COLORFONDO-EVENTOS);
+    color: var(--color-base);
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+footer a:hover {
+    text-align: center;
+    text-decoration: underline;
+    color: var(--color-contACTO);
+}
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.curso-card {
+    border-top: solid var(--COLOR-CIUDAD) 4px;
+}
+
+header, footer, main {
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: var(--color-contACTO);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Tablas y cuadros más grandes */
+table {
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 20px;
+    font-size: 1.2rem;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
 }
