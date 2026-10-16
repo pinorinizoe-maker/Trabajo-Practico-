@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ciudad de la Furia - La Ciudad</title>
-  <link rel="stylesheet" href="css/tp.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <!-- Hoja de Estilos Externa -->
+  <link rel="stylesheet" href="../css/estilos.css">
+
 </head>
 <body>
 
@@ -17,10 +20,10 @@
     <p>“Donde cada calle tiene su ritmo”</p>
     <nav>
       <ul>
-        <li><a href="index.html" class="activo">Inicio</a></li>
-        <li><a href="ciudad.html">Cursos</a></li>
-        <li><a href="lugares.html">Profesores</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="index.html" target="_blank">Inicio</a></li>
+<li><a href="ciudad.html" target="_blank" class="activo">Ciudad</a></li>
+<li><a href="lugares.html" target="_blank">Lugares</a></li>
+<li><a href="contacto.html" target="_blank">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -30,7 +33,7 @@
     <!-- PRESENTACIÓN -->
     <section>
       <h2>Conocé Ciudad de la Furia</h2>
-      <img src="img/ciudad.jpg" alt="Vista de Ciudad de la Furia" width="700">
+      <img src="../img/ciudad.jpeg" alt="Vista de Ciudad de la Furia" width="700">
       <p>
         Ciudad de la Furia es una ciudad ubicada en la provincia de
         Buenos Aires, Argentina. Es una ciudad moderna y diversa que
@@ -46,210 +49,123 @@
     </section>
 
     <!-- INFORMACIÓN GENERAL -->
-    <section>
-      <h2>Información general</h2>
-      <table border="1">
-        <tr>
-          <th>Dato</th>
-          <th>Información</th>
-        </tr>
-        <tr>
-          <td>País</td>
-          <td>Argentina</td>
-        </tr>
-        <tr>
-          <td>Provincia</td>
-          <td>Buenos Aires</td>
-        </tr>
-        <tr>
-          <td>Población</td>
-          <td>850.000 habitantes</td>
-        </tr>
-        <tr>
-          <td>Fundación</td>
-          <td>12 de octubre de 1887</td>
-        </tr>
-        <tr>
-          <td>Clima</td>
-          <td>Templado</td>
-        </tr>
-        <tr>
-          <td>Idioma</td>
-          <td>Español</td>
-        </tr>
-        <tr>
-          <td>Apodo</td>
-          <td>La ciudad que suena</td>
-        </tr>
-      </table>
-    </section>
+   <section>
+<h2>Datos Generales</h2>
+  
+<section class="resumen-grid">
+  <div class="tarjeta-dato">
+    <h3>📍 Ubicación y Fundación</h3>
+    <p>Fundación: 20 de octubre de 1884</p>
+    <p>Provincia: Buenos Aires, Argentina</p>
+  </div>
+
+  <div class="tarjeta-dato">
+    <h3>👥 Población y Extensión</h3>
+    <p>Habitantes: ~850.000</p>
+    <p>Extensión: 180 km²</p>
+  </div>
+
+  <div class="tarjeta-dato">
+    <h3>🌤️ Clima e Idioma</h3>
+    <p>Clima: Templado</p>
+    <p>Idioma: Español</p>
+    <p>Moneda: Puas</p>
+  </div>
+</section>
 
     <!-- MAPA -->
     <section>
       <h2>Mapa de la ciudad</h2>
-      <p>
-        Ciudad de la Furia está dividida en diferentes zonas y barrios.
-        Cada uno tiene sus propias características y actividades.
-      </p>
-
-      <table border="1">
-        <tr>
-          <th colspan="3">Mapa de Ciudad de la Furia</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <strong>Distorsión</strong><br>
-            🎸 Rock y música
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <strong>La Bohemia</strong><br>
-            ☕ Cultura y cafés
-          </td>
-          <td>
-            <strong>Centro</strong><br>
-            🏛️ Zona comercial
-          </td>
-          <td>
-            <strong>Frecuencia</strong><br>
-            🎤 Zona joven
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <strong>Los Álamos</strong><br>
-            🌳 Zona residencial
-          </td>
-          <td>
-            <strong>Distrito Industrial</strong><br>
-            🏭 Industrias
-          </td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- BARRIOS -->
-    <section>
-      <h2>Barrios</h2>
-      <p>
-        La ciudad cuenta con distintos barrios que permiten encontrar
-        diferentes ambientes y actividades.
-      </p>
-      <table border="1">
-        <tr>
-          <th>Barrio</th>
-          <th>Características</th>
-          <th>Lugares destacados</th>
-        </tr>
-        <tr>
-          <td>Centro</td>
-          <td>Zona comercial y administrativa</td>
-          <td>Municipalidad y Teatro Municipal</td>
-        </tr>
-        <tr>
-          <td>Distorsión</td>
-          <td>Zona relacionada con el rock</td>
-          <td>Bares, estudios y locales de instrumentos</td>
-        </tr>
-        <tr>
-          <td>Frecuencia</td>
-          <td>Barrio joven y urbano</td>
-          <td>Murales, locales y espacios culturales</td>
-        </tr>
-        <tr>
-          <td>La Bohemia</td>
-          <td>Zona cultural y tranquila</td>
-          <td>Cafés, librerías y galerías</td>
-        </tr>
-        <tr>
-          <td>Los Álamos</td>
-          <td>Zona principalmente residencial</td>
-          <td>Plazas, escuelas y clubes</td>
-        </tr>
-        <tr>
-          <td>Distrito Industrial</td>
-          <td>Zona industrial y empresarial</td>
-          <td>Fábricas y empresas</td>
-        </tr>
-      </table>
-    </section>
+     <img src="../img/mapa.jpeg" alt="Mapa de Ciudad de la Furia" width="500">
 
     <!-- TRANSPORTE -->
     <section>
       <h2>Transporte</h2>
-      <img src="img/estacion.jpg" alt="Estación Central de Ciudad de la Furia" width="500">
+      <img src="../img/estacion.jpeg" alt="Estación Central de Ciudad de la Furia" width="500">
       <p>
         La ciudad cuenta con diferentes medios de transporte que
         permiten conectar los barrios y facilitar el desplazamiento
         de sus habitantes.
       </p>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li>🚆 Tren y Estación Central</li>
-        <li>🚌 Líneas de colectivos</li>
-        <li>🚕 Taxis</li>
-        <li>🚲 Ciclovías</li>
-        <li>🚗 Avenidas principales</li>
-      </ul>
-    </section>
+      
+      
+        <div class="tarjeta-dato">
+    <h3>🚆 Tren y Estación Central</h3>
+    <p>La Estación Central es el principal punto de conexión ferroviaria de la ciudad, ofreciendo servicios a diferentes destinos.</p>
+  </div>
+  <div class="tarjeta-dato">
+    <h3> 🚌 Líneas de colectivos</h3>
+    <p>Las líneas de colectivos conectan diferentes partes de la ciudad, ofreciendo un servicio accesible y económico.</p>
+  </div>
+  <div class="tarjeta-dato">
+    <h3> 🚕 Taxis</h3>
+    <p>Los taxis están disponibles en toda la ciudad y ofrecen un servicio rápido y cómodo para los habitantes y visitantes.</p>
+  </div>
+    <div class="tarjeta-dato">
+    <h3>🚲 Ciclovías</h3>
+    <p>Las ciclovías permiten desplazarse de manera segura y ecológica por la ciudad.</p>
+  </div>
+   <div class="tarjeta-dato">
+    <h3>🚲🚗 Avenidas principales</h3>
+    <p>Las avenidas principales ofrecen una conectividad eficiente y accesible por toda la ciudad.</p>
+  </div>
 
-    <!-- SERVICIOS -->
-    <section>
-      <h2>Servicios de la ciudad</h2>
-      <table border="1">
-        <tr>
-          <th>Servicio</th>
-          <th>Institución o lugar</th>
-        </tr>
-        <tr>
-          <td>Salud</td>
-          <td>Hospital Municipal de la Furia</td>
-        </tr>
-        <tr>
-          <td>Educación</td>
-          <td>Instituto Técnico Furia</td>
-        </tr>
-        <tr>
-          <td>Seguridad</td>
-          <td>Comisaría Central</td>
-        </tr>
-        <tr>
-          <td>Emergencias</td>
-          <td>Servicio Municipal de Emergencias</td>
-        </tr>
-        <tr>
-          <td>Transporte</td>
-          <td>Estación Central</td>
-        </tr>
-        <tr>
-          <td>Administración</td>
-          <td>Municipalidad de Ciudad de la Furia</td>
-        </tr>
-      </table>
     </section>
+    <!-- SERVICIOS DE LA CIUDAD -->
+<section>
+  <h2>Servicios de la ciudad</h2>
+  
+  <div class="resumen-grid">
+    <div class="tarjeta-dato">
+      <h3>🏥 Salud y Emergencias</h3>
+      <p>🏥 <strong>Salud:</strong> Hospital Municipal de la Furia</p>
+      <p>🚑 <strong>Emergencias:</strong> Servicio Municipal de Emergencias</p>
+    </div>
 
-    <!-- LUGARES IMPORTANTES -->
-    <section>
-      <h2>Lugares importantes</h2>
-      <p>
-        Algunos de los lugares más representativos de la ciudad son:
-      </p>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li>Municipalidad de Ciudad de la Furia</li>
-        <li>Parque de la Furia</li>
-        <li>Teatro Municipal</li>
-        <li>Museo del Sonido</li>
-        <li>Plaza del Ritmo</li>
-        <li>Estadio Furia</li>
-        <li>Estación Central</li>
-      </ul>
-      <img src="img/parque.jpg" alt="Parque de la Furia" width="350">
-      <img src="img/teatro.jpg" alt="Teatro Municipal" width="350">
-    </section>
+    <div class="tarjeta-dato">
+      <h3>🛡️ Educación y Seguridad</h3>
+      <p>🎓 <strong>Educación:</strong> Instituto Técnico Furia</p>
+      <p>🚔 <strong>Seguridad:</strong> Comisaría Central</p>
+    </div>
 
+    <div class="tarjeta-dato">
+      <h3>🏛️ Gestión y Movilidad</h3>
+      <p>🚆 <strong>Transporte:</strong> Estación Central</p>
+      <p>🏛️ <strong>Administración:</strong> Municipalidad de Ciudad de la Furia</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Lugares importantes</h2>
+  <p>
+    Algunos de los lugares más representativos de la ciudad son:
+  </p>
+
+  <div class="resumen-grid">
+    <div class="tarjeta-dato">
+      <h3>🏛️ Gobierno y Transporte</h3>
+      <p>🏛️ Municipalidad de Ciudad de la Furia</p>
+      <p>🚆 Estación Central</p>
+    </div>
+
+    <div class="tarjeta-dato">
+      <h3>🎭 Cultura y Arte</h3>
+      <p>🎭 Teatro Municipal</p>
+      <p>🎵 Museo del Sonido</p>
+    </div>
+
+    <div class="tarjeta-dato">
+      <h3>🌳 Espacios Verdes y Eventos</h3>
+      <p>🌳 Parque de la Furia</p>
+      <p>📍 Plaza del Ritmo</p>
+      <p>⚽ Estadio Furia</p>
+    </div>
+
+</section>
+  <img src="../img/parque.jpeg" alt="Parque de la Furia" width="500">
+  <img src="../img/teatro.jpeg" alt="Teatro Municipal" width="500">
+</div>
     <!-- CULTURA Y MÚSICA -->
     <section>
       <h2>Cultura y música</h2>
@@ -268,38 +184,31 @@
     <!-- FURIA FEST -->
     <section>
       <h2>Furia Fest</h2>
-      <img src="img/festival.jpg" alt="Furia Fest" width="700">
+      <img src="../img/furiafest.jpeg" alt="Furia Fest" width="700">
       <p>
         El <strong>Furia Fest</strong> es el evento musical más importante
         de la ciudad. Se realiza una vez al año en el Parque de la Furia
         y reúne artistas de diferentes géneros.
       </p>
-      <table border="1">
-        <tr>
-          <th>Característica</th>
-          <th>Información</th>
-        </tr>
-        <tr>
-          <td>Duración</td>
-          <td>3 días</td>
-        </tr>
-        <tr>
-          <td>Artistas</td>
-          <td>Más de 50 artistas</td>
-        </tr>
-        <tr>
-          <td>Escenarios</td>
-          <td>5 escenarios</td>
-        </tr>
-        <tr>
-          <td>Lugar</td>
-          <td>Parque de la Furia</td>
-        </tr>
-        <tr>
-          <td>Géneros</td>
-          <td>Rock, pop, urbano, indie y electrónica</td>
-        </tr>
-      </table>
+      <div class="resumen-grid">
+  <div class="tarjeta-dato">
+    <h3>📅 Duración y Lugar</h3>
+    <p>⏳ <strong>Duración:</strong> 3 días</p>
+    <p>🌳 <strong>Lugar:</strong> Parque de la Furia</p>
+  </div>
+
+  <div class="tarjeta-dato">
+    <h3>🎤 Shows y Escenarios</h3>
+    <p>👥 <strong>Artistas:</strong> Más de 50 artistas</p>
+    <p>🎛️ <strong>Escenarios:</strong> 5 escenarios</p>
+  </div>
+
+  <div class="tarjeta-dato">
+    <h3>🎶 Géneros Musicales</h3>
+    <p>🎸 Rock, Pop y Urbano</p>
+    <p>🎧 Indie y Electrónica</p>
+  </div>
+</div>
       <p>
         <a href="lugares.html">Conocé más sobre Furia Fest</a>
       </p>
