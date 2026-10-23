@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./CSS VERDADERO.css">
 </head>
 <body>
 
@@ -19,7 +20,7 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="ciudad.html">La Ciudad</a></li>
         <li><a href="lugares.html">Lugares y Festivales</a></li>
-        <li><a href="contactociudad.html" class="activo">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -65,7 +66,7 @@
 
     <!-- SECCIÓN DEL FORMULARIO -->
     <section class="seccion-formulario">
-      <h2>Formulario de Colaboración</h2>
+      <h2>Reserva tu lugar para el festival</h2>
       <form action="#" method="post">
         
         <div class="grupo-input">
@@ -79,25 +80,56 @@
         </div>
 
         <div class="grupo-input">
-          <label for="motivo">¿Cómo querés colaborar?</label>
+          <label for="motivo">Lugar a Hospedar</label>
           <select name="motivo" id="motivo">
             <option value="">Seleccioná una opción</option>
-            <option value="furia">Furia Fest.</option>
-            <option value="vol">Turismo</option>
-            <option value="don">Cultura y eventos</option>
-            <option value="red">Participación / Emprendimientos</option>
-            <option value="tra">Otras consultas</option>
-          </select>
+            <option value="furia">Rock Hostel.</option>
+            <option value="vol">Alamo Hostel</option>
+            <option value="don">Bohemia Hostel</option>
+            <option value="red">Furia Siutes</option>
+        </select>
         </div>
+        <div class="grupo-input">
+          <label for="motivo">Dias a quedarse</label>
+          <select for="motivo" id="motivo">
+            <option value="">Seleccioná una opción</option>
+            <option value="furia">2 dias y una noche</option>
+            <option value="vol">3 dias y 2 noches</option>
+            <option value="don">4 dias y 3 noches</option>
+          </select>
+          </div>
 
         <button type="submit" class="btn-enviar">Enviar solicitud</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Ciudad de la Furia - Oficina de Turismo</p>
-  </footer>
+<!-- Pie de Página -->
+<footer>
+<h4>Municipalidad de Ciudad de la Furia</h4>
+<p>
+<strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia
+    </p>
+<p>
+      <strong>Teléfono:</strong>
+      <a href="tel:+541112345678">+54 11 1234-5678</a>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:turismo@ciudaddelafuria.com" target="_blank">turismo@ciudaddelafuria.com</a>
+    </p>
+
+    <h3>Redes sociales</h3>
+
+    <p>
+      Seguinos en nuestra red social:
+      <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">
+        Furia Social
+      </a>
+    </p>
+</footer>
+
 
 </body>
 </html>
