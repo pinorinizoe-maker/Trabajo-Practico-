@@ -104,6 +104,58 @@
     </section>
   </main>
 
+  <!-- SECCIÓN 2: FORMULARIO DE COMPRA DE ENTRADAS -->
+    <section class="seccion-formulario">
+      <h2>Comprá tus Entradas para el Festival</h2>
+      <form action="#" method="post">
+        
+        <div class="grupo-input">
+          <label for="nombre-entrada">Nombre y apellido</label>
+          <input type="text" id="nombre-entrada" name="nombre_entrada" required placeholder="Ej: Juan Pérez">
+        </div>
+
+        <div class="grupo-input">
+          <label for="correo-entrada">Correo electrónico (para recibir tu entrada)</label>
+          <input type="email" id="correo-entrada" name="correo_entrada" required placeholder="tu@correo.com">
+        </div>
+
+        <div class="grupo-input">
+          <label for="tipo-entrada">Tipo de Entrada</label>
+          <select name="tipo_entrada" id="tipo-entrada" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="general">Entrada General (1 Día)</option>
+            <option value="vip">Abono VIP (Todos los días)</option>
+            <option value="campo">Campo Preferencial</option>
+          </select>
+        </div>
+
+        <div class="grupo-input">
+          <label for="cantidad">Cantidad de Entradas</label>
+          <select name="cantidad" id="cantidad" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="1">1 Entrada</option>
+            <option value="2">2 Entradas</option>
+            <option value="3">3 Entradas</option>
+            <option value="4">4 Entradas</option>
+            <option value="5">5 Entradas</option>
+          </select>
+        </div>
+
+        <div class="grupo-input">
+          <label for="pago">Método de Pago</label>
+          <select name="pago" id="pago" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+            <option value="transferencia">Transferencia Bancaria</option>
+            <option value="mercadopago">Mercado Pago</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-enviar">Comprar entradas</button>
+      </form>
+    </section>
+  </main>
+
 <!-- Pie de Página -->
 <footer>
 <h4>Municipalidad de Ciudad de la Furia</h4>
