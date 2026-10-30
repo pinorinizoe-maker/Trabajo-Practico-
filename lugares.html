@@ -1,112 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciudad de la Furia - Lugares y Festivales</title>
-<link rel="stylesheet" href="./CSS VERDADERO.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciudad de la Furia - Contacto</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Tu CSS propio -->
+  <link rel="stylesheet" href="CSS VERDADERO.css">
 </head>
 <body>
-    <header>
-        <h1>🏙️ Ciudad de la Furia</h1>
-        <p>“Donde cada calle tiene su ritmo”</p>
-        <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="ciudad.html">La Ciudad</a></li>
-        <li><a href="lugares.html">Lugares y Festivales</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html">🏙️ Ciudad de la Furia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="ciudad.html">La Ciudad</a></li>
+            <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares y Festivales</a></li>
+            <li class="nav-item"><a class="nav-link activo" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    </header>
+  </header>
 
-    <main>
-        <section>
-            <h1>🏛️ Lugares Emblemáticos y Escenarios</h1>
-            <p>Conoce los espacios donde se vive la música y la cultura de nuestra ciudad.</p>
-        </section>
+  <main>
+    <!-- SECCIÓN DE INFORMACIÓN Y DATOS -->
+    <section class="seccion-contacto">
+      <h2>Contacto y Ubicación</h2>
+      <p>¿Querés obtener más información sobre la Ciudad de la Furia? Podés comunicarte con nuestra Oficina de Turismo o visitarnos en el predio.</p>
 
-        <!-- Sección del Festival Principal -->
-        <section>
-            <h2>🎸 Furia Fest</h2>
-            <p>Es el evento cultural más importante de la ciudad.</p>
-            <h3>📊 Datos clave:</h3>
-            <ul>
-                <li>📅 Se realiza una vez al año</li>
-                <li>⏳ Dura 3 días</li>
-                <li>🎤 Participan más de 50 artistas.</li>
-                <li>🎛️ Tiene 5 escenarios.</li>
-                <li>🌳 Se realiza en el Parque de la Furia</li>
-            </ul>
-        </section>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>📌 Oficina de Turismo</h3>
+          <p><strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia</p>
+          <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+          <p><strong>Email:</strong> <a href="mailto:turismo@ciudaddelafuria.com">turismo@ciudaddelafuria.com</a></p>
+        </div>
 
-        <!-- Sección del Parque de la Furia -->
-        <section>
-            <h3>🌳 Parque de la Furia</h3>
-            <p>El predio principal y espacio verde más grande de la ciudad donde se lleva a cabo el Furia Fest Cuenta con 5 escenarios:</p>
-            <ul>
-                <li><strong>🎸 Escenario Furia:</strong> Rock</li>
-                <li><strong>🎤 Escenario Urbano:</strong> Trap y rap</li>
-                <li><strong>🎸 Escenario Alternativo:</strong> Indie</li>
-                <li><strong>🎛️ Escenario Electro:</strong> Electrónica</li>
-                <li><strong>🎶 Escenario Acústico:</strong> Pop y acústico</li>
-            </ul>
-            <figure>
-                <img src="./images.jpg" alt="Escenario principal del Furia Fest">
-                <figcaption>🎶 Escenario Furia</figcaption>
-            </figure>
-        </section>
+        <div class="info-box">
+          <h3>🌐 Redes sociales</h3>
+          <p>Seguinos en nuestra red social oficial para enterarte de los line-ups y sorpresas:</p>
+          <p><a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">Furia Social Oficial</a></p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Sección de Sectores del Predio -->
-        <section>
-            <h2>🎪 Sectores del Predio</h2>
-            <ul>
-                <li>🍔 <strong>Furia Food:</strong> Puestos de comida y food trucks.</li>
-                <li>🎨 <strong>Re Arte:</strong> Murales y artistas urbanos.</li>
-                <li>🛍️ <strong>Fa Market:</strong> Ropa, accesorios y emprendimientos.</li>
-                <li>🎮 <strong>Sol Play:</strong> Videojuegos y actividades.</li>
-                <li>📸 <strong>Do Spot:</strong> Lugares para sacarse fotos.</li>
-                <li>♻️ <strong>Mi Verde:</strong> Espacio del programa ambiental con puntos verdes para separar residuos durante el festival.</li>
-            </ul>
-        </section>
+    <!-- SECCIÓN DEL MAPA DE LA CIUDAD -->
+    <section class="seccion-mapa">
+      <h2>Mapa del Predio</h2>
+      <p>Encontrá los escenarios, zonas de foodtrucks y la oficina de informes.</p>
+      <div class="contenedor-mapa">
+      <img src="../img/mapa.jpeg" alt="Mapa de Ciudad de la Furia" width="500">
+    </section>
 
-        <!-- Sección de Otros Lugares Turísticos -->
-        <section>
-            <h2>🗺️ Otros Lugares Turísticos para Visitar</h2>
-            <p>Además del Parque de la Furia, la ciudad cuenta con atractivos imperdibles:</p>
-            <ul>
-                <li>📍 <strong>Plaza del Ritmo:</strong> Punto de encuentro principal ubicado en el Centro.</li>
-                <li>🎨 <strong>Pasaje Sonoro:</strong> Calle decorada con murales sobre la historia musical.</li>
-                <li>🎵 <strong>Museo del Sonido:</strong> Dedicado a la historia de la música local.</li>
-                <li>🎭 <strong>Teatro Municipal:</strong> Sede de espectáculos y eventos culturales.</li>
-            </ul>
-        </section>
-    </main>
+    <!-- SECCIÓN DEL FORMULARIO DE RESERVA DE HOSPEDAJE -->
+    <section class="seccion-formulario">
+      <h2>Reserva tu lugar para el festival</h2>
+      <form action="#" method="post">
+        
+        <div class="grupo-input">
+          <label for="nombre">Nombre y apellido</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej: María Gomez">
+        </div>
 
-   <footer>
-<h4>Municipalidad de Ciudad de la Furia</h4>
-<p>
-<strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia
-    </p>
-<p>
-      <strong>Teléfono:</strong>
-      <a href="tel:+541112345678">+54 11 1234-5678</a>
-    </p>
+        <div class="grupo-input">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required placeholder="tu@correo.com">
+        </div>
 
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:turismo@ciudaddelafuria.com" target="_blank">turismo@ciudaddelafuria.com</a>
-    </p>
+        <div class="grupo-input">
+          <label for="motivo">Lugar a Hospedar</label>
+          <select name="motivo" id="motivo">
+            <option value="">Seleccioná una opción</option>
+            <option value="furia">Rock Hostel</option>
+            <option value="vol">Alamo Hostel</option>
+            <option value="don">Bohemia Hostel</option>
+            <option value="red">Furia Suites</option>
+          </select>
+        </div>
+
+        <div class="grupo-input">
+          <label for="dias">Días a quedarse</label>
+          <select name="dias" id="dias">
+            <option value="">Seleccioná una opción</option>
+            <option value="2d">2 días y 1 noche</option>
+            <option value="3d">3 días y 2 noches</option>
+            <option value="4d">4 días y 3 noches</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar solicitud</button>
+      </form>
+    </section>
+
+    <!-- SECCIÓN 2: FORMULARIO DE COMPRA DE ENTRADAS -->
+    <section class="seccion-formulario">
+      <h2>Comprá tus Entradas para el Festival</h2>
+      <form action="#" method="post">
+        
+        <div class="grupo-input">
+          <label for="nombre-entrada">Nombre y apellido</label>
+          <input type="text" id="nombre-entrada" name="nombre_entrada" required placeholder="Ej: Juan Pérez">
+        </div>
+
+        <div class="grupo-input">
+          <label for="correo-entrada">Correo electrónico (para recibir tu entrada)</label>
+          <input type="email" id="correo-entrada" name="correo_entrada" required placeholder="tu@correo.com">
+        </div>
+
+        <div class="grupo-input">
+          <label for="tipo-entrada">Tipo de Entrada</label>
+          <select name="tipo_entrada" id="tipo-entrada" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="general">Entrada General (1 Día)</option>
+            <option value="vip">Abono VIP (Todos los días)</option>
+            <option value="campo">Campo Preferencial</option>
+          </select>
+        </div>
+
+        <div class="grupo-input">
+          <label for="cantidad">Cantidad de Entradas</label>
+          <select name="cantidad" id="cantidad" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="1">1 Entrada</option>
+            <option value="2">2 Entradas</option>
+            <option value="3">3 Entradas</option>
+            <option value="4">4 Entradas</option>
+            <option value="5">5 Entradas</option>
+          </select>
+        </div>
+
+        <div class="grupo-input">
+          <label for="pago">Método de Pago</label>
+          <select name="pago" id="pago" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+            <option value="transferencia">Transferencia Bancaria</option>
+            <option value="mercadopago">Mercado Pago</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-enviar">Comprar entradas</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer>
+    <h4>Municipalidad de Ciudad de la Furia</h4>
+    <p><strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia</p>
+    <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+    <p><strong>Email:</strong> <a href="mailto:turismo@ciudaddelafuria.com" target="_blank">turismo@ciudaddelafuria.com</a></p>
 
     <h3>Redes sociales</h3>
-
     <p>
       Seguinos en nuestra red social:
-      <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">
-        Furia Social
-      </a>
+      <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">Furia Social</a>
     </p>
-</footer>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
