@@ -4,108 +4,138 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ciudad de la Furia - La Ciudad que Suena</title>
-<link rel="stylesheet" href="./CSS VERDADERO.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- CSS propio del sitio -->
+<link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-<!-- Encabezado y Navegación Principal -->
-<header>
-<h1>🏙️ Ciudad de la Furia</h1>
-<p>“Donde cada calle tiene su ritmo”</p>
-<nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="ciudad.html">La Ciudad</a></li>
-        <li><a href="lugares.html">Lugares y Festivales</a></li>
-        <li><a href="contacto.html" >Contacto</a></li>
-      </ul>
-    </nav>
+<!-- ENCABEZADO -->
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Cambiar container-fluid por container para centrar y alinear con el contenido de la página -->
+    <div class="container px-4">
+      <!-- Logo con espacios correctos entre las palabras -->
+     <a class="navbar-brand logo" href="index.html">
+  CIUDAD<span class="rosa">DE LA</span>FURIA
+</a>
+      <!-- Botón Hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú -->
+      <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link activo" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="ciudad.html"> Ciudad</a></li>
+          <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares y Festivales</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+        
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="./contacto.html#entradas" class="btn-passes">CONSIGUE PASSES</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
 </header>
 
+
 <main>
-<!-- Bienvenida Principal -->
-<section>
-<h2>Bienvenido a la Ciudad que Suena</h2>
-<p>Una combinación única de historia, industria, comercio, espacios verdes y cultura musical.</p>
-<a href="lugares.html">Descubrir la ciudad</a>
-</section>
+  <!-- Bienvenida Principal -->
+  <section class="my-5">
+    <h2>Bienvenido a la Ciudad que Suena</h2>
+    <p>Una combinación única de historia, industria, comercio, espacios verdes y cultura musical.</p>
 
-<!-- Resumen de Datos Generales -->
-<!-- Resumen de Datos Generales -->
-<section>
-<h2>Datos Generales</h2>
+    <img src="./img/ciudad.jpeg" alt="Vista de Ciudad de la Furia" width="700">
 
-<div class="resumen-grid">
-  <div class="tarjeta-dato">
-    <h3>📍 Ubicación y Fundación</h3>
-    <p>Fundación: 20 de octubre de 1884</p>
-    <p>Provincia: Buenos Aires, Argentina</p>
-  </div>
+    <a href="lugares.html" class="btn btn-outline-warning mt-2">Descubrir la ciudad</a>
+  </section>
 
-  <div class="tarjeta-dato">
-    <h3>👥 Población y Extensión</h3>
-    <p>Habitantes: ~850.000</p>
-    <p>Extensión: 180 km²</p>
-  </div>
+  <!-- Resumen de Datos Generales (Implementando Grilla de Bootstrap requerida) -->
+  <section class="container my-5">
+    <h2>Datos Generales</h2>
 
-  <div class="tarjeta-dato">
-    <h3>🌤️ Clima e Idioma</h3>
-    <p>Clima: Templado</p>
-    <p>Idioma: Español</p>
-    <p>Moneda: Puas</p>
-  </div>
-</div>
-</section>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="tarjeta-dato h-100">
+          <h3> Ubicación y Fundación</h3>
+          <p>Fundación: 20 de octubre de 1884</p>
+          <p>Provincia: Buenos Aires, Argentina</p>
+        </div>
+      </div>
 
-<!-- Destacados de la Ciudad -->
-<section>
-<h2>Lo más destacado</h2>
+      <div class="col-12 col-md-4">
+        <div class="tarjeta-dato h-100">
+          <h3>👥 Población y Extensión</h3>
+          <p>Habitantes: ~850.000</p>
+          <p>Extensión: 180 km²</p>
+        </div>
+      </div>
 
-<article>
-<h3>🏙️ Historia y Tradición</h3>
-<p>Fundada en 1884 como un asentamiento comercial y agrícola, creció con la llegada del ferrocarril hasta convertirse en un importante centro urbano y cultural.</p>
-<a href="ciudad.html">Leer más historia &rarr;</a>
-</article>
+      <div class="col-12 col-md-4">
+        <div class="tarjeta-dato h-100">
+          <h3> Clima e Idioma</h3>
+          <p>Clima: Templado</p>
+          <p>Idioma: Español</p>
+          <p>Moneda: Puas</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<article>
-<h3>🎪 Furia Fest</h3>
-<p>El evento del año. 3 días de música, 5 escenarios en el Parque de la Furia y más de 50 artistas en vivo.</p>
-<a href="lugares.html">Ver lineup y escenarios &rarr;</a>
-</article>
-</section>
+  <!-- Destacados de la Ciudad -->
+  <section class="container my-5">
+    <h2>Lo más destacado</h2>
 
-<!-- Programa Medioambiente -->
-<section>
-<h2>🌱 Programa Furia Verde</h2>
-<p>Promovemos la separación de residuos, la creación de espacios verdes y la movilidad sustentable en todos los eventos de la ciudad.</p>
-</section>
-</main>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="tarjeta-dato h-100">
+          <h3>Historia y Tradición</h3>
+          <p>Fundada en 1884 como un asentamiento comercial y agrícola, creció con la llegada del ferrocarril hasta convertirse en un importante centro urbano y cultural.</p>
+          <a href="ciudad.html">Leer más historia &rarr;</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="tarjeta-dato h-100">
+          <h3>Furia Fest</h3>
+          <p>El evento del año. 3 días de música, 5 escenarios en el Parque de la Furia y más de 50 artistas en vivo.</p>
+          <a href="lugares.html">Ver lineup y escenarios &rarr;</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="tarjeta-dato h-100">
+          <h3>Programa Furia Verde</h3>
+          <p>Promovemos la separación de residuos, la creación de espacios verdes y la movilidad sustentable en todos los eventos de la ciudad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- Pie de Página -->
 <footer>
-<h4>Municipalidad de Ciudad de la Furia</h4>
-<p>
-<strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia
-    </p>
-<p>
-      <strong>Teléfono:</strong>
-      <a href="tel:+541112345678">+54 11 1234-5678</a>
-    </p>
+  <h4>Municipalidad de Ciudad de la Furia</h4>
+  <p><strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia</p>
+  <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+  <p><strong>Email:</strong> <a href="mailto:turismo@ciudaddelafuria.com" target="_blank">turismo@ciudaddelafuria.com</a></p>
 
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:turismo@ciudaddelafuria.com" target="_blank">turismo@ciudaddelafuria.com</a>
-    </p>
-
-    <h3>Redes sociales</h3>
-
-    <p>
-      Seguinos en nuestra red social:
-      <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">
-        Furia Social
-      </a>
-    </p>
+  <h3>Redes sociales</h3>
+  <p>
+    Seguinos en nuestra red social:
+    <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">Furia Social</a>
+  </p>
 </footer>
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
