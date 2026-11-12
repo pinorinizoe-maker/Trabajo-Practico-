@@ -1,0 +1,97 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. MODO CLARO / OSCURO (CON INTERRUPTOR TOGGLE)
+  const toggleModo = document.getElementById("checkbox-modo");
+  
+  // Recuperar preferencia guardada
+  const modoGuardado = localStorage.getItem("modo-sitio");
+  if (modoGuardado === "claro") {
+    document.body.classList.add("modo-claro");
+    if (toggleModo) toggleModo.checked = true;
+  }
+
+  if (toggleModo) {
+    toggleModo.addEventListener("change", () => {
+      if (toggleModo.checked) {
+        document.body.classList.add("modo-claro");
+        localStorage.setItem("modo-sitio", "claro");
+      } else {
+        document.body.classList.remove("modo-claro");
+        localStorage.setItem("modo-sitio", "oscuro");
+      }
+    });
+  }
+
+  // 2. CUENTA REGRESIVA PARA FURIA FEST (Configurada para el 20 de Noviembre de 2026 a las 17:00)
+  const fechaEvento = new Date(2026, 10, 20, 17, 0, 0).getTime();
+
+  function actualizarContador() {
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
+
+    const elemDesktop = document.getElementById("contador-furiafest");
+    const elemMobile = document.getElementById("contador-furiafest-mobile");
+    const elemPrincipal = document.getElementById("contador-furiafest-principal");
+
+    if (diferencia < 0) {
+      const mensaje = "⚡ ¡EL FURIA FEST YA EMPEZÓ! ⚡";
+      if (elemDesktop) elemDesktop.textContent = mensaje;
+      if (elemMobile) elemMobile.textContent = mensaje;
+      if (elemPrincipal) elemPrincipal.textContent = mensaje;
+      return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    const textoEncabezado = ` Furia Fest en: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    const textoPrincipal = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+
+    if (elemDesktop) elemDesktop.textContent = textoEncabezado;
+    if (elemMobile) elemMobile.textContent = textoEncabezado;
+    if (elemPrincipal) elemPrincipal.textContent = textoPrincipal;
+  }
+
+  actualizarContador();
+  setInterval(actualizarContador, 1000);
+
+  // 3. VALIDACIÓN DE FORMULARIOS EN CONTACTO
+  const formularios = document.querySelectorAll(".seccion-formulario form");
+
+  formularios.forEach((form) => {
+    form.addEventListener("submit", (evento) => {
+      // Evita que la página se recargue sola al apretar enviar
+      evento.preventDefault();
+
+      const campos = form.querySelectorAll("input, select");
+      let formularioValido = true;
+
+      campos.forEach((campo) => {
+        const valor = campo.value.trim();
+
+        // Verifica que no esté vacío ni tenga solo espacios
+        if (valor === "") {
+          formularioValido = false;
+          campo.style.borderColor = "#ff007a"; // Borde magenta si falta completar
+        } else {
+          campo.style.borderColor = "#00ff9d"; // Borde verde si está bien
+        }
+      });
+
+      if (!formularioValido) {
+        alert("⚠️ Por favor, completá todos los campos obligatorios antes de continuar.");
+        return;
+      }
+
+      // Si está todo completo:
+      alert("✅ ¡Solicitud enviada con éxito! Te contactaremos a la brevedad.");
+      form.reset(); // Limpia el formulario
+
+      // Vuelve los bordes al color original (cyan)
+      campos.forEach((campo) => {
+        campo.style.borderColor = "#00e5ff";
+      });
+    });
+  });
+})
