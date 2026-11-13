@@ -1,141 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ciudad de la Furia - La Ciudad que Suena</title>
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- CSS propio del sitio -->
-<link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciudad de la Furia - La Ciudad que Suena</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <!-- Hojas de Estilo -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<!-- ENCABEZADO -->
+  <!-- ENCABEZADO -->
 <header class="sticky-top">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <!-- Cambiar container-fluid por container para centrar y alinear con el contenido de la página -->
-    <div class="container px-4">
-      <!-- Logo con espacios correctos entre las palabras -->
-     <a class="navbar-brand logo" href="index.html">
-  CIUDAD<span class="rosa">DE LA</span>FURIA
-</a>
-      <!-- Botón Hamburguesa -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Menú -->
-      <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
-        <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link activo" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="ciudad.html"> Ciudad</a></li>
-          <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares y Festivales</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid px-4 px-xl-5">
         
-        <div class="ms-lg-3 mt-3 mt-lg-0">
-          <a href="./contacto.html#entradas" class="btn-passes">CONSIGUE PASSES</a>
-        </div>
-      </div>
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="index.html">
+          CIUDAD<span class="rosa">DE LA</span>FURIA
+        </a>
 
+        <!-- Cuenta Regresiva Escritorio -->
+        <div class="mx-auto text-center d-none d-md-block">
+          <span id="contador-furiafest" class="fw-bold text-warning fs-6">Cargando cuenta regresiva...</span>
+        </div>
+
+        <!-- Botón Hamburguesa Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú de Navegación -->
+        <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link activo" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
+            <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares y Festivales</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          
+          <div class="ms-lg-3 mt-3 mt-lg-0 d-flex align-items-center gap-2">
+            <a href="./contacto.html#entradas" class="btn-passes">CONSIGUE PASSES</a>
+            
+  <!-- INTERRUPTOR DESLIZABLE -->
+<label class="theme-switch" for="checkbox-modo">
+  <input type="checkbox" id="checkbox-modo" />
+  <div class="slider round">
+    <span class="icon moon">🌙</span>
+    <span class="icon sun">☀️</span>
+  </div>
+</label>
+          </div>
+        </div>        
+      </div>
+    </nav>
+
+    <!-- Cuenta Regresiva Mobile -->
+    <div class="d-md-none bg-black text-center py-1 border-bottom border-warning">
+      <span id="contador-furiafest-mobile" class="fw-bold text-warning fs-6">Cargando cuenta regresiva...</span>
     </div>
-  </nav>
-</header>
+  </header>
 
+  <main>
+    <!-- Título Principal para Semántica H1 -->
+    <h1 class="visually-hidden">Ciudad de la Furia - Sitio Oficial</h1>
 
-<main>
-  <!-- Bienvenida Principal -->
-  <section class="my-5">
-    <h2>Bienvenido a la Ciudad que Suena</h2>
-    <p>Una combinación única de historia, industria, comercio, espacios verdes y cultura musical.</p>
+    <!-- SECCIÓN COMPLETA DE LA CUENTA REGRESIVA -->
+    <section class="seccion-cuenta-regresiva container my-5">
+      <div class="tarjeta-contador-hero text-center p-4 p-md-5 rounded-4">
+        <h2 class="titulo-contador">⚡ FURIA FEST 2026 ⚡</h2>
+        <p class="subtitulo-contador">El festival más esperado de la ciudad está llegando. ¡Preparate para vivir la experiencia!</p>
+        
+        <!-- Contenedor del contador en tamaño grande -->
+        <div class="caja-reloj-gigante my-4 py-3 px-4 rounded-4 d-inline-block">
+          <span id="contador-furiafest-principal" class="numero-contador">Cargando cuenta regresiva...</span>
+        </div>
 
-    <img src="./img/ciudad.jpeg" alt="Vista de Ciudad de la Furia" width="700">
-
-    <a href="lugares.html" class="btn btn-outline-warning mt-2">Descubrir la ciudad</a>
-  </section>
-
-  <!-- Resumen de Datos Generales (Implementando Grilla de Bootstrap requerida) -->
-  <section class="container my-5">
-    <h2>Datos Generales</h2>
-
-    <div class="row g-4">
-      <div class="col-12 col-md-4">
-        <div class="tarjeta-dato h-100">
-          <h3> Ubicación y Fundación</h3>
-          <p>Fundación: 20 de octubre de 1884</p>
-          <p>Provincia: Buenos Aires, Argentina</p>
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mt-3">
+          <a href="contacto.html#entradas" class="btn-passes fs-5 px-4 py-2">CONSIGUE TUS PASSES</a>
+          <a href="lugares.html" class="btn btn-outline-info rounded-pill px-4 py-2">VER LINEUP</a>
         </div>
       </div>
+    </section>
 
-      <div class="col-12 col-md-4">
-        <div class="tarjeta-dato h-100">
-          <h3>👥 Población y Extensión</h3>
-          <p>Habitantes: ~850.000</p>
-          <p>Extensión: 180 km²</p>
+    <section class="my-5">
+      <h2>Bienvenido a la Ciudad que Suena</h2>
+      <p>Una combinación única de historia, industria, comercio, espacios verdes y cultura musical.</p>
+
+      <img src="./img/ciudad.jpeg" alt="Vista de Ciudad de la Furia" width="700">
+
+      <a href="lugares.html" class="btn btn-outline-warning mt-2">Descubrir la ciudad</a>
+    </section>
+
+    <section class="container my-5">
+      <h2>Datos Generales</h2>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="tarjeta-dato h-100">
+            <h3>Ubicación y Fundación</h3>
+            <p>Fundación: 20 de octubre de 1884</p>
+            <p>Provincia: Buenos Aires, Argentina</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="tarjeta-dato h-100">
+            <h3>👥 Población y Extensión</h3>
+            <p>Habitantes: ~850.000</p>
+            <p>Extensión: 180 km²</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="tarjeta-dato h-100">
+            <h3>Clima e Idioma</h3>
+            <p>Clima: Templado</p>
+            <p>Idioma: Español</p>
+            <p>Moneda: Puas</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-12 col-md-4">
-        <div class="tarjeta-dato h-100">
-          <h3> Clima e Idioma</h3>
-          <p>Clima: Templado</p>
-          <p>Idioma: Español</p>
-          <p>Moneda: Puas</p>
+    <section class="container my-5">
+      <h2>Lo más destacado</h2>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="tarjeta-dato h-100">
+            <h3>Historia y Tradición</h3>
+            <p>Fundada en 1884 como un asentamiento comercial y agrícola, creció con la llegada del ferrocarril hasta convertirse en un importante centro urbano y cultural.</p>
+            <a href="ciudad.html">Leer más historia &rarr;</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="tarjeta-dato h-100">
+            <h3>Furia Fest</h3>
+            <p>El evento del año. 3 días de música, 5 escenarios en el Parque de la Furia y más de 50 artistas en vivo.</p>
+            <a href="lugares.html">Ver lineup y escenarios &rarr;</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="tarjeta-dato h-100">
+            <h3>Programa Furia Verde</h3>
+            <p>Promovemos la separación de residuos, la creación de espacios verdes y la movilidad sustentable en todos los eventos de la ciudad.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Destacados de la Ciudad -->
-  <section class="container my-5">
-    <h2>Lo más destacado</h2>
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <h3>Municipalidad de Ciudad de la Furia</h3>
+    <p><strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia</p>
+    <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+    <p><strong>Email:</strong> <a href="mailto:turismo@ciudaddelafuria.com" target="_blank">turismo@ciudaddelafuria.com</a></p>
 
-    <div class="row g-4">
-      <div class="col-12 col-md-4">
-        <div class="tarjeta-dato h-100">
-          <h3>Historia y Tradición</h3>
-          <p>Fundada en 1884 como un asentamiento comercial y agrícola, creció con la llegada del ferrocarril hasta convertirse en un importante centro urbano y cultural.</p>
-          <a href="ciudad.html">Leer más historia &rarr;</a>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <div class="tarjeta-dato h-100">
-          <h3>Furia Fest</h3>
-          <p>El evento del año. 3 días de música, 5 escenarios en el Parque de la Furia y más de 50 artistas en vivo.</p>
-          <a href="lugares.html">Ver lineup y escenarios &rarr;</a>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <div class="tarjeta-dato h-100">
-          <h3>Programa Furia Verde</h3>
-          <p>Promovemos la separación de residuos, la creación de espacios verdes y la movilidad sustentable en todos los eventos de la ciudad.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- Pie de Página -->
-<footer>
-  <h4>Municipalidad de Ciudad de la Furia</h4>
-  <p><strong>Dirección:</strong> Avenida de la Furia 1234, Ciudad de la Furia</p>
-  <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
-  <p><strong>Email:</strong> <a href="mailto:turismo@ciudaddelafuria.com" target="_blank">turismo@ciudaddelafuria.com</a></p>
-
-  <h3>Redes sociales</h3>
-  <p>
-    Seguinos en nuestra red social:
-    <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">Furia Social</a>
-  </p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <h3>Redes sociales</h3>
+    <p>
+      Seguinos en nuestra red social:
+      <a href="https://www.furia-social.example" target="_blank" rel="noopener noreferrer">Furia Social</a>
+    </p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
